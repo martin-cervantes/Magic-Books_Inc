@@ -1,68 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Magic-Books Inc
 
-## Available Scripts
+This project is about creating a very simple React and Redux application. Working on a real world project for a fictitious company that requires help. They have requested help to build the front-end of an application that will help them organize and manage their bookstore. They want it to be fast, dynamic, and responsive to their actions. The project has been split into several milestones, and each milestone has functional and technical requirements that were implemented.
 
-In the project directory, you can run:
+![screenshot](./Screenshot.png)
 
-### `yarn start`
+## :package: Built With
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- HTML and JSX
+- CSS
+- Javascript (ES6)
+- React
+- Redux
+- npm
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## :mag: Live Demo
 
-### `yarn test`
+[Live Demo Link](https://magic-books-app-project.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :computer: Getting Started
 
-### `yarn build`
+To get a local copy up and running follow these simple steps.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Download
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1) Clone the repository to your local machine
 
-### `yarn eject`
+```sh
+  $ git clone https://github.com/mcervantes71/Magic-Books_Inc.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2) cd into the directory
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+  $ cd Magic-Books_Inc
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Requirements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+  $ npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Build project and open web server running project
 
-### Code Splitting
+```sh
+  $ npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Analyzing the Bundle Size
+The page will reload if you make edits.You will also see any lint errors in the console.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```sh
+  $ npm run build
+```
 
-### Making a Progressive Web App
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
-### Advanced Configuration
+```sh
+  $ npm test
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Launches the test runner in the interactive watch mode.
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## :busts_in_silhouette: Authors
 
-### `yarn build` fails to minify
+👤 **Martin Cervantes**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Linkedin: [Martin Cervantes](https://www.linkedin.com/in/cervantesmartin/)
+- Twitter: [@M4rt1nC3rv4nt3s](https://twitter.com/M4rt1nC3rv4nt3s)
+- Github: [@mcervantes71](https://github.com/mcervantes71)
+- Gmail: [cervantes.martine](mailto:cervantes.martine@gmail.com)
+
+## 🤝 Contributing
+
+    Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues).
+
+## :star2: Show your support
+
+    Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
