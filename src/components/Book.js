@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Book(props) {
-  const { data } = props;
+export default function Book({ data }) {
   const { bookId, title, category } = data;
 
   return (
@@ -16,7 +15,4 @@ export default function Book(props) {
 
 Book.propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired,
-  bookId: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
 };
