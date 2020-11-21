@@ -10,7 +10,7 @@ const bookTitles = [
   'I, Robot',
 ];
 
-const categories = [
+export const categories = [
   'Action',
   'Biography',
   'History',
@@ -30,9 +30,7 @@ bookTitles.forEach((book, i) => {
   });
 });
 
-const initialState = {
+export const initialState = {
   books,
   filter: 'All'
 };
-
-export default initialState;
