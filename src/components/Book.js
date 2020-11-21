@@ -12,7 +12,7 @@ export default function Book({ data, removeBook }) {
       <td>
         <button
           type="button"
-          onClick={() => removeBook(data)}
+          onClick={() => removeBook(bookId)}
         >
           Remove Book
         </button>
