@@ -32,6 +32,7 @@ bookTitles.forEach((book, i) => {
 
 const initialState = {
   books,
+  filter: 'All'
 };
 
 export default initialState;
