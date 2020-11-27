@@ -2,7 +2,7 @@ import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
 
 const bookIds = () => Math.ceil(Math.random() * 100);
 
-function bookReducer(state = [], action) {
+function bookReducer(state = {}, action) {
   switch (action.type) {
     case CREATE_BOOK:
     return Object.assign({}, state, { books: [
