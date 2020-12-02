@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CategoryFilter from '../components/CategoryFilter';
 import { connect } from 'react-redux';
 import { changeFilter } from '../actions';
@@ -13,7 +14,9 @@ class Header extends React.Component {
   handleFilterChange(event) {
     event.preventDefault();
 
-    this.props.filterBooks(event.target.value);
+    const { changeFilter } = this.props;
+
+    changeFilter(event.target.value);
   }
 
   render() {
@@ -24,10 +27,15 @@ class Header extends React.Component {
     );
   }
 }
+
 const mapDispatchToProps = dispatch => ({
-  filterBooks: filter => {
+  changeFilter: filter => {
     dispatch(changeFilter(filter));
   },
 });
+
+Header.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+};
 
 export default connect(null, mapDispatchToProps)(Header);
