@@ -4,8 +4,11 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
-function BooksList({ books, removeBook }) {
+function BooksList({ books, filter, removeBook }) {
   const handleRemoveBook = (book => removeBook(book));
+
+  if(filter !== 'All')
+    books = books.filter(book => book.category === filter);
 
   return (
     <table>
@@ -31,11 +34,13 @@ BooksList.propTypes = {
       category: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  filter: PropTypes.string.isRequired,
   removeBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   books: state.books,
+  filter: state.filter
 });
 
 const mapDispatchToProps = dispatch => ({
