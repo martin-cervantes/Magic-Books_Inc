@@ -7,9 +7,6 @@ import { removeBook } from '../actions';
 function BooksList({ books, filter, removeBook }) {
   const handleRemoveBook = (book => removeBook(book));
 
-  if(filter !== 'All')
-    books = books.filter(book => book.category === filter);
-
   return (
     <table>
       <thead>
@@ -20,7 +17,11 @@ function BooksList({ books, filter, removeBook }) {
         </tr>
       </thead>
       <tbody>
-        {books.map(book => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)}
+        {
+          books
+            .filter(book => (filter === 'All' ? true : book.category === filter))
+            .map(book => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)
+        }
       </tbody>
     </table>
   );
@@ -40,7 +41,7 @@ BooksList.propTypes = {
 
 const mapStateToProps = state => ({
   books: state.books,
-  filter: state.filter
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({

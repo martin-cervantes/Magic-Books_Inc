@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CategoryFilter from '../components/CategoryFilter';
 import { connect } from 'react-redux';
+import CategoryFilter from '../components/CategoryFilter';
 import { changeFilter } from '../actions';
 
 class Header extends React.Component {
