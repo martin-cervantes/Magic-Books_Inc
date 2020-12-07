@@ -1,5 +1,56 @@
-body {
-  font-family: 'Courier New', monospace;
+:root {
+  --azure: #0290ff;
+  --black: #121212;
+  --gray: #e8e8e8;
+}
+
+/* HEADER */
+
+header {
+  background-color: #fff;
+  border: 2px solid var(--gray);
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.brand {
+  color: var(--azure);
+  font-size: 1.9rem;
+  font-weight: bold;
+  padding-right: 2.9rem;
+  width: 16rem;
+}
+
+.title {
+  color: var(--black);
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  padding-right: 2.5rem;
+  width: 59px;
+}
+
+.filter {
+  width: 6.5rem;
+  height: 1rem;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  color: var(--black);
+}
+
+.user {
+  cursor: pointer;
+  margin-right: 1rem;
+  width: 3rem;
 }
 
 table,
@@ -7,6 +58,6 @@ th,
 td {
   border: 1px black solid;
   border-collapse: collapse;
-  text-align: center;
   padding: 2px 5px;
+  text-align: center;
 }

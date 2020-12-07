@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import CategoryFilter from '../components/CategoryFilter';
 import { changeFilter } from '../actions';
 
+import user from '../img/user.png';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,14 @@ class Header extends React.Component {
   render() {
     return (
       <header>
-        <CategoryFilter handleFilterChange={this.handleFilterChange} />
+        <div className="left">
+          <div className="brand">Bookstore CMS</div>
+          <div className="title">BOOKS</div>
+          <CategoryFilter handleFilterChange={this.handleFilterChange} />
+        </div>
+        <div className="right">
+          <img className="user" src={user} alt="User" title="User" />
+        </div>
       </header>
     );
   }

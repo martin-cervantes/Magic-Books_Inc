@@ -107,10 +107,10 @@ section {
   display: block;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
 
 body {
-  font-family: 'Roboto', monospace;
+  font-family: 'Montserrat', monospace;
   font-size: 16px;
   line-height: 1;
   max-width: 1400px;
