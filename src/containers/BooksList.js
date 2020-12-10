@@ -8,22 +8,13 @@ function BooksList({ books, filter, removeBook }) {
   const handleRemoveBook = (book => removeBook(book));
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          books
-            .filter(book => (filter === 'All' ? true : book.category === filter))
-            .map(book => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)
-        }
-      </tbody>
-    </table>
+    <div className="books">
+      {
+        books
+          .filter(book => (filter === 'All' ? true : book.category === filter))
+          .map(book => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)
+      }
+    </div>
   );
 }
 
