@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 :root {
   --azure: #0290ff;
   --black: #121212;
@@ -53,11 +55,92 @@ header {
   width: 3rem;
 }
 
-table,
-th,
-td {
-  border: 1px black solid;
-  border-collapse: collapse;
-  padding: 2px 5px;
-  text-align: center;
+/* Books */
+.book-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-category {
+  color: var(--black);
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+.book-title {
+  color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0.4rem;
+  letter-spacing: -0.2px;
+}
+
+.book-author {
+  color: #4386bf;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.3rem 0;
+  width: 20rem;
+}
+
+.action {
+  color: #4386bf;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0.25rem 1rem;
+}
+
+.action:hover {
+  text-decoration: underline;
+}
+
+.action:first-child {
+  padding-left: 0;
+}
+
+.remove {
+  background-color: #fff;
+  border: 2px solid var(--gray);
+  border-width: 0 2px;
+}
+
+.progress {
+  border-right: 2px solid var(--gray);
+  height: 4.2rem;
+  width: 10rem;
+}
+
+.chapter {
+  width: 10rem;
+}
+
+.chapter-button {
+  background-color: var(--azure);
+  border: 2px solid var(--azure);
+  border-radius: 3px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  height: 2rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.3rem;
+  width: 11.5rem;
 }
