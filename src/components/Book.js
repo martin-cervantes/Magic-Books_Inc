@@ -12,22 +12,38 @@ export default function Book({ data, removeBook }) {
   } = data;
 
   return (
-    <tr>
-      <td>{bookId}</td>
-      <td>{author}</td>
-      <td>{title}</td>
-      <td>{category}</td>
-      <td>{progress}</td>
-      <td>{chapter}</td>
-      <td>
-        <button
-          type="button"
-          onClick={() => removeBook(bookId)}
-        >
-          Remove Book
-        </button>
-      </td>
-    </tr>
+    <div className="book-container">
+      <div className="book">
+        <div className="book-info">
+          <p className="book-category">{category}</p>
+          <h1 className="book-title">{title}</h1>
+          <p className="book-author">{author}</p>
+
+          <div className="actions">
+            <p className="action">Comments</p>
+
+            <button
+              className="action remove"
+              type="button"
+              onClick={() => removeBook(bookId)}
+            >
+              Remove Book
+            </button>
+
+            <p className="action">Edit</p>
+          </div>
+        </div>
+
+        <div className="progress">
+          {progress}
+        </div>
+      </div>
+
+      <div className="chapter">
+        {chapter}
+        <button className="chapter-button" type="button">UPDATE PROGRESS</button>
+      </div>
+    </div>
   );
 }
 
