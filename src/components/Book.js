@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import circularProgress from '../img/circular-progress.png';
+
 export default function Book({ data, removeBook }) {
   const {
     bookId,
@@ -14,7 +16,7 @@ export default function Book({ data, removeBook }) {
   return (
     <div className="book-container">
       <div className="book">
-        <div className="book-info">
+        <div>
           <p className="book-category">{category}</p>
           <h1 className="book-title">{title}</h1>
           <p className="book-author">{author}</p>
@@ -34,8 +36,17 @@ export default function Book({ data, removeBook }) {
           </div>
         </div>
 
-        <div className="progress">
-          {progress}
+        <div className="progress-container">
+          <img className="circular-progress-bar" src={circularProgress} alt="74%" />
+
+          <div className="progress-info">
+            <p className="percentage">
+              {progress}
+              <spam>%</spam>
+            </p>
+
+            <p className="progress-label">Completed</p>
+          </div>
         </div>
       </div>
 
