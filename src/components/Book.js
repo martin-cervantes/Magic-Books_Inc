@@ -51,7 +51,11 @@ export default function Book({ data, removeBook }) {
       </div>
 
       <div className="chapter">
-        {chapter}
+        <div>
+          <p className="chapter-label">CURRENT CHAPTER</p>
+          <p className="chapter-current">{chapter}</p>
+        </div>
+
         <button className="chapter-button" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
