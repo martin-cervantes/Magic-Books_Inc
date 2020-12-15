@@ -110,9 +110,11 @@ section {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
 
 body {
+  background-color: #f9f9f9;
   font-family: 'Montserrat', monospace;
   font-size: 16px;
   line-height: 1;
+  margin: 0 auto;
   max-width: 1400px;
 }
 
