@@ -39,7 +39,7 @@ bookTitles.forEach((book, i) => {
     title: book,
     category: categories[i],
     progress: Math.ceil(Math.random() * 100),
-    chapter: 'Chapter 1',
+    chapter: 'Chapter 5',
   });
 });
 

@@ -9,11 +9,11 @@ function bookReducer(state = books, action) {
       return [...state,
         {
           bookId: bookIds(),
-          author: action.book.author,
+          author: 'Default author name',
           title: action.book.title,
           category: action.book.category,
-          progress: action.book.progress,
-          chapter: action.book.chapter,
+          progress: 75,
+          chapter: 'Chapter 5',
         },
       ];
     case REMOVE_BOOK:
