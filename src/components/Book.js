@@ -42,7 +42,7 @@ export default function Book({ data, removeBook }) {
           <div className="progress-info">
             <p className="percentage">
               {progress}
-              <spam>%</spam>
+              <span>%</span>
             </p>
 
             <p className="progress-label">Completed</p>
