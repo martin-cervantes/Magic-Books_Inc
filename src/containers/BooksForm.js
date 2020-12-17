@@ -2,23 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import { categories } from '../store/init';
 
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
-    this.categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
     this.state = {
       title: '',
-      category: this.categories[0],
+      category: categories[0],
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    const { name, value } = event.target;
+  handleChange({ target: { name, value } }) {
     this.setState({ [name]: value });
   }
 
@@ -28,29 +27,34 @@ class BooksForm extends React.Component {
     const { createBook } = this.props;
 
     createBook(this.state);
-    
-    this.setState({ title: '', category: '' });
+
+    this.setState({ title: '', category: categories[0] });
     event.target.reset();
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Enter book title"
-          onChange={this.handleChange}
-          required
-        />
+      <form className="books-form" onSubmit={this.handleSubmit}>
+        <h1 id="title">ADD NEW BOOK</h1>
 
-        <select name="category" onChange={this.handleChange}>
-          {this.categories.map(category => (
-            <option value={category} key={category}>{category}</option>
-          ))}
-        </select>
+        <div className="controls">
+          <input
+            name="title"
+            className="form-input"
+            type="text"
+            placeholder="Enter book title"
+            onChange={this.handleChange}
+            required
+          />
 
-        <button type="submit">Save Book</button>
+          <select className="form-select" name="category" onChange={this.handleChange}>
+            {categories.map(category => (
+              <option value={category} key={category}>{category}</option>
+            ))}
+          </select>
+
+          <button className="form-button" type="submit">ADD BOOK</button>
+        </div>
       </form>
     );
   }

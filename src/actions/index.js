@@ -1,5 +1,6 @@
 export const CREATE_BOOK = 'CREATE_BOOK';
 export const REMOVE_BOOK = 'REMOVE_BOOK';
+export const CHANGE_FILTER = 'CHANGE_FILTER';
 
 export function createBook(book) {
   return {
@@ -8,9 +9,16 @@ export function createBook(book) {
   };
 }
 
-export function removeBook(book) {
+export function removeBook(id) {
   return {
     type: REMOVE_BOOK,
-    book,
+    id,
+  };
+}
+
+export function changeFilter(category) {
+  return {
+    type: CHANGE_FILTER,
+    category,
   };
 }
