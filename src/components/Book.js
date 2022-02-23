@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import circularProgress from '../img/circular-progress.png';
 
-export default function Book({ data, removeBook }) {
+const Book = ({ data, removeBook }) => {
   const {
     bookId,
     author,
@@ -60,7 +60,7 @@ export default function Book({ data, removeBook }) {
       </div>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   data: PropTypes.shape({
@@ -73,3 +73,5 @@ Book.propTypes = {
   }).isRequired,
   removeBook: PropTypes.func.isRequired,
 };
+
+export default Book;
