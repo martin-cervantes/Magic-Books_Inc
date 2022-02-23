@@ -2,23 +2,17 @@ export const CREATE_BOOK = 'CREATE_BOOK';
 export const REMOVE_BOOK = 'REMOVE_BOOK';
 export const CHANGE_FILTER = 'CHANGE_FILTER';
 
-export function createBook(book) {
-  return {
-    type: CREATE_BOOK,
-    book,
-  };
-}
+export const createBook = (book) => ({
+  type: CREATE_BOOK,
+  book,
+});
 
-export function removeBook(id) {
-  return {
-    type: REMOVE_BOOK,
-    id,
-  };
-}
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
 
-export function changeFilter(category) {
-  return {
-    type: CHANGE_FILTER,
-    category,
-  };
-}
+export const changeFilter = (category) => ({
+  type: CHANGE_FILTER,
+  category,
+});

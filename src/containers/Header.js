@@ -37,8 +37,8 @@ class Header extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  changeFilter: filter => {
+const mapDispatchToProps = (dispatch) => ({
+  changeFilter: (filter) => {
     dispatch(changeFilter(filter));
   },
 });

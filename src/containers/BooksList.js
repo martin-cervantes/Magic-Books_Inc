@@ -4,19 +4,19 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
-function BooksList({ books, filter, removeBook }) {
-  const handleRemoveBook = (book => removeBook(book));
+const BooksList = ({ books, filter, removeBook }) => {
+  const handleRemoveBook = ((book) => removeBook(book));
 
   return (
     <div className="books">
       {
         books
-          .filter(book => (filter === 'All' ? true : book.category === filter))
-          .map(book => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)
+          .filter((book) => (filter === 'All' ? true : book.category === filter))
+          .map((book) => <Book key={book.bookId} data={book} removeBook={handleRemoveBook} />)
       }
     </div>
   );
-}
+};
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(
@@ -30,13 +30,13 @@ BooksList.propTypes = {
   removeBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
 });
 
-const mapDispatchToProps = dispatch => ({
-  removeBook: bookToRemove => {
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (bookToRemove) => {
     dispatch(removeBook(bookToRemove));
   },
 });

@@ -48,7 +48,7 @@ class BooksForm extends React.Component {
           />
 
           <select className="form-select" name="category" onChange={this.handleChange}>
-            {categories.map(category => (
+            {categories.map((category) => (
               <option value={category} key={category}>{category}</option>
             ))}
           </select>
@@ -60,8 +60,8 @@ class BooksForm extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  createBook: newBook => {
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (newBook) => {
     dispatch(createBook(newBook));
   },
 });
